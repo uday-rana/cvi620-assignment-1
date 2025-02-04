@@ -1,5 +1,11 @@
+"""
+CVI620 Assignment 1 Part 1
+Uday Rana
+"""
+
 import os
 import sys
+
 import cv2 as cv
 
 cap = cv.VideoCapture(0)
@@ -22,8 +28,10 @@ while True:
     if not ret:
         print("Can't receive frame (stream end?). Exiting ...")
         break
+
     cv.imshow("Photo Booth", frame)
     key = cv.waitKey(1)
+
     if key == ord("s"):
         cv.imwrite(f"./{OUTPUT_DIR}/image{i}.jpg", frame)
         i = i + 1
