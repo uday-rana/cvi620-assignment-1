@@ -1,16 +1,16 @@
 import os
+import sys
 import cv2 as cv
 
 cap = cv.VideoCapture(0)
 
 if not cap.isOpened():
-    print("Cannot open camera")
-    exit()
+    sys.exit("Cannot open camera")
 
-output_dir = "./out"
+OUTPUT_DIR = "./out"
 
-if not os.path.exists(output_dir):
-    os.makedirs(output_dir)
+if not os.path.exists(OUTPUT_DIR):
+    os.makedirs(OUTPUT_DIR)
 
 i = 1
 
@@ -25,7 +25,7 @@ while True:
     cv.imshow("Photo Booth", frame)
     key = cv.waitKey(1)
     if key == ord("s"):
-        cv.imwrite(f"./{output_dir}/image{i}.jpg", frame)
+        cv.imwrite(f"./{OUTPUT_DIR}/image{i}.jpg", frame)
         i = i + 1
     elif key == ord("q"):
         break
