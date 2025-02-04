@@ -34,7 +34,7 @@ while True:
 
     if key == ord("s"):
         cv.imwrite(f"./{OUTPUT_DIR}/image{i}.jpg", frame)
-        i = i + 1
+        i += 1
     elif key == ord("q"):
         break
 
