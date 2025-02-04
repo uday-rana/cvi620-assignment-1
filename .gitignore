@@ -172,3 +172,5 @@ cython_debug/
 
 img/
 out/
+
+.ruff_cache
