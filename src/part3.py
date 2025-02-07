@@ -1,15 +1,15 @@
-# This is combined version of the part 3 and it runs with part 3 version 2
-# Version 2 includes whe actual image(.jpg) files is loaded
-# and displayed, with green rectangle , thickness to -1(filled)
-# and text in the rectangle in the end of part 3
-# you can also checkout whole process of doing part 3 in part3.ipynb
+"""
+This is combined version of the part 3 and it runs with part 3 version 2.
+Version 2 includes when actual image(.jpg) files is loaded
+and displayed, with green rectangle, thickness to -1(filled)
+and text in the rectangle in the end of part 3.
+You can also checkout whole process of doing part 3 in part3.ipynb.
+"""
 
+import os
 
-# https://matplotlib.org/stable/gallery/shapes_and_collections/compound_path.html#sphx-glr-gallery-shapes-and-collections-compound-path-py
-# imports
 import cv2
 import matplotlib.pyplot as plt
-import os
 
 # Get the directory where the script is located
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -34,9 +34,11 @@ font_size = 1
 color = (0, 0, 255)
 # set the thickness
 thickness = 2
+
 # put the text on the image
 rectangle = cv2.rectangle(img, (100, 100), (300, 200), (0, 255, 0), thickness=-1)
 rectangle = cv2.putText(img, text, (100, 150), font, font_size, color, thickness)
+
 # display the image
 plt.imshow(img)
 plt.show()
