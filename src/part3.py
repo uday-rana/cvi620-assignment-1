@@ -1,4 +1,4 @@
-#This is combined version of the part 3 and it runs with part 3 version 2
+# This is combined version of the part 3 and it runs with part 3 version 2
 # Version 2 includes whe actual image(.jpg) files is loaded
 # and displayed, with green rectangle , thickness to -1(filled)
 # and text in the rectangle in the end of part 3
@@ -8,7 +8,6 @@
 # https://matplotlib.org/stable/gallery/shapes_and_collections/compound_path.html#sphx-glr-gallery-shapes-and-collections-compound-path-py
 # imports
 import cv2
-import numpy as np
 import matplotlib.pyplot as plt
 import os
 
