@@ -12,7 +12,6 @@ import os
 import cv2
 import matplotlib.pyplot as plt
 
-
 # Constants
 TEXT = "Sangjune"
 FONT = cv2.FONT_HERSHEY_SIMPLEX
