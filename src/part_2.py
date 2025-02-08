@@ -7,9 +7,7 @@ import sys
 
 import cv2 as cv
 
-"""
-Part A - Brightness and Contrast
-"""
+# Part A - Brightness and Contrast
 
 img = cv.imread("./img/cat.jpeg")
 
