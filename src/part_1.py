@@ -23,8 +23,8 @@ def get_unique_filename(directory, base_name, extension):
     """Creates a unique filename by appending a number counter before the file extension"""
     counter = 1
     while True:
-        filename = f"{base_name}{counter}{extension}"
-        filepath = os.path.join(directory, filename)
+        new_filename = f"{base_name}{counter}{extension}"
+        filepath = os.path.join(directory, new_filename)
         if not os.path.exists(filepath):
             return filepath
         counter += 1
