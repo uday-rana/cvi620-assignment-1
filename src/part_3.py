@@ -26,7 +26,7 @@ def main():
     # Get the directory where the script is located
     script_dir = os.path.dirname(os.path.abspath(__file__))
     # Build the path to the image
-    img_path = os.path.join(script_dir, "Lucy2.jpg")
+    img_path = os.path.join(script_dir, "../img/cat.jpeg")
 
     # Load the image with error checking
     img = cv2.imread(img_path)
