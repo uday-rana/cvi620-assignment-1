@@ -18,7 +18,17 @@ OUTPUT_DIR = "./out"
 if not os.path.exists(OUTPUT_DIR):
     os.makedirs(OUTPUT_DIR)
 
-i = 1
+
+def get_unique_filename(directory, base_name, extension):
+    """Creates a unique filename by appending a number counter before the file extension"""
+    counter = 1
+    while True:
+        filename = f"{base_name}{counter}{extension}"
+        filepath = os.path.join(directory, filename)
+        if not os.path.exists(filepath):
+            return filepath
+        counter += 1
+
 
 while True:
     # Capture frame-by-frame
@@ -33,8 +43,8 @@ while True:
     key = cv.waitKey(1)
 
     if key == ord("s"):
-        cv.imwrite(f"./{OUTPUT_DIR}/image{i}.jpg", frame)
-        i += 1
+        filename = get_unique_filename(OUTPUT_DIR, "image", ".jpg")
+        cv.imwrite(filename, frame)
     elif key == ord("q"):
         break
 
