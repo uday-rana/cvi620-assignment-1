@@ -1,8 +1,18 @@
+"""
+Part 2B of the assignment - Image Blending
+This module implements linear blending of two images with user-specified alpha value.
+"""
+
 import cv2
 import matplotlib.pyplot as plt
 
 
 def main():
+    """
+    Main function that handles image loading, displaying and blending.
+    Loads two images, displays them side by side, then creates a blended
+    version based on user input alpha value.
+    """
     # Read the first image
     img1 = cv2.imread("../img/cat.jpeg")
     img1 = cv2.cvtColor(img1, cv2.COLOR_BGR2RGB)
