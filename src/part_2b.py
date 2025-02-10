@@ -14,11 +14,11 @@ def main():
     version based on user input alpha value.
     """
     # Read the first image
-    img1 = cv2.imread("../img/cat.jpeg")
+    img1 = cv2.imread("./img/cat.jpeg")
     img1 = cv2.cvtColor(img1, cv2.COLOR_BGR2RGB)
 
     # Read the second image
-    img2 = cv2.imread("../img/Dog and Cat.jpg")
+    img2 = cv2.imread("./img/dog_and_cat.jpeg")
     img2 = cv2.cvtColor(img2, cv2.COLOR_BGR2RGB)
 
     # Print original dimensions
